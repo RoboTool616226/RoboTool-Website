@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/RoboTool-Website/static/css/main.379fbba4.css",
-    "main.js": "/RoboTool-Website/static/js/main.3e27e698.js",
+    "main.js": "/RoboTool-Website/static/js/main.51af07c5.js",
     "static/js/787.b5eb48a5.chunk.js": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js",
     "index.html": "/RoboTool-Website/index.html",
     "main.379fbba4.css.map": "/RoboTool-Website/static/css/main.379fbba4.css.map",
-    "main.3e27e698.js.map": "/RoboTool-Website/static/js/main.3e27e698.js.map",
+    "main.51af07c5.js.map": "/RoboTool-Website/static/js/main.51af07c5.js.map",
     "787.b5eb48a5.chunk.js.map": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.379fbba4.css",
-    "static/js/main.3e27e698.js"
+    "static/js/main.51af07c5.js"
   ]
 }
