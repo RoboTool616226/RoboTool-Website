@@ -1,0 +1,47 @@
+import numpy as np
+
+# Get the position and size of box_1
+box_1_position, _ = get_position('box_1')
+box_1_size = get_size('box_1')
+
+# Get the position and size of box_2
+box_2_position, _ = get_position('box_2')
+box_2_size = get_size('box_2')
+
+# Calculate the target position for box_2
+target_box_2_position = [box_1_position[0] - box_1_size[0]/2 - box_2_size[0]/2 - 0.01, box_1_position[1], box_1_position[2]]
+
+# Push box_2 to the target position
+push_to_position('box_2', target_box_2_position)
+
+# Get the updated position of box_2
+box_2_position, _ = get_position('box_2')
+
+# Get the size of the robot
+robot_size = get_size('robot')
+
+# Calculate the target position for the robot to climb onto box_2
+target_robot_position = [box_2_position[0], box_2_position[1], box_2_size[2]+robot_size[2]/2]
+
+# Climb onto box_2
+climb_to_position(target_robot_position)
+
+# Get the updated position and size of box_1
+box_1_position, _ = get_position('box_1')
+box_1_size = get_size('box_1')
+
+# Calculate the target position for the robot to climb onto box_1
+target_robot_position = [box_1_position[0], box_1_position[1], box_1_size[2]+robot_size[2]/2]
+
+# Climb onto box_1
+climb_to_position(target_robot_position)
+
+# Get the position and size of the sofa
+sofa_position, _ = get_position('sofa')
+sofa_size = get_size('sofa')
+
+# Calculate the target position for the robot to climb onto the sofa
+target_robot_position = [sofa_position[0], sofa_position[1], sofa_size[2]+robot_size[2]/2]
+
+# Climb onto the sofa
+climb_to_position(target_robot_position)
