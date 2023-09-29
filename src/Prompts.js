@@ -167,6 +167,7 @@ export default function Prompts() {
             sx={{
               fontFamily: "Monospace",
             }}
+            // style={{ wordWrap: "break-word" }}
           >
             {fileContent}
           </DialogContentText>
