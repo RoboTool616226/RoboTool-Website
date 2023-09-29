@@ -1,30 +1,32 @@
 {
   "files": {
-    "main.css": "/RoboTool-Website/static/css/main.379fbba4.css",
-    "main.js": "/RoboTool-Website/static/js/main.54e005b2.js",
+    "main.css": "/RoboTool-Website/static/css/main.ffcfca89.css",
+    "main.js": "/RoboTool-Website/static/js/main.20d305c5.js",
     "static/js/787.b5eb48a5.chunk.js": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js",
-    "static/media/pipeline.png": "/RoboTool-Website/static/media/pipeline.d67f880c60d7226ce3f2.png",
+    "static/media/background.png": "/RoboTool-Website/static/media/background.e35024c7523e47a0a2e7.png",
+    "static/media/pipeline.png": "/RoboTool-Website/static/media/pipeline.0dfaf39d6c32fb4b4492.png",
+    "static/media/title_background.png": "/RoboTool-Website/static/media/title_background.a705c1d3c8d216a940dc.png",
+    "static/media/arm_prompt_planner.txt": "/RoboTool-Website/static/media/arm_prompt_planner.6d196e346bfa3e8de80a.txt",
     "static/media/legRobot_code_box.txt": "/RoboTool-Website/static/media/legRobot_code_box.3b37cb93d754f3779fd4.txt",
     "static/media/arm_code_scroll.txt": "/RoboTool-Website/static/media/arm_code_scroll.854f41cd3f2c026e0992.txt",
     "static/media/arm_code_hammer.txt": "/RoboTool-Website/static/media/arm_code_hammer.052d1d3cdc04ed21cd2d.txt",
     "static/media/arm_code_magnet.txt": "/RoboTool-Website/static/media/arm_code_magnet.c27d42ee85ab8727a593.txt",
     "static/media/legRobot_code_lever.txt": "/RoboTool-Website/static/media/legRobot_code_lever.7ea5bcb7a4c1ee93a811.txt",
+    "static/media/arm_prompt_analyzer.txt": "/RoboTool-Website/static/media/arm_prompt_analyzer.67e80f55295346f361df.txt",
     "static/media/legRobot_code_surfboard.txt": "/RoboTool-Website/static/media/legRobot_code_surfboard.f7d6c9caf8f1ecf3664b.txt",
     "index.html": "/RoboTool-Website/index.html",
-    "static/media/arm_prompt_planner.txt": "/RoboTool-Website/static/media/arm_prompt_planner.426b73dc4c837343da5f.txt",
     "static/media/legRobot_prompt_calculator.txt": "/RoboTool-Website/static/media/legRobot_prompt_calculator.086e7995580e784f5242.txt",
     "static/media/legRobot_prompt_coder.txt": "/RoboTool-Website/static/media/legRobot_prompt_coder.211223ebca3e2e438750.txt",
-    "static/media/arm_prompt_analyzer.txt": "/RoboTool-Website/static/media/arm_prompt_analyzer.7a77f67a06292d683ca2.txt",
     "static/media/arm_prompt_calculator.txt": "/RoboTool-Website/static/media/arm_prompt_calculator.7f39a7886068356f8800.txt",
     "static/media/arm_prompt_coder.txt": "/RoboTool-Website/static/media/arm_prompt_coder.77d6130adc0169b2d9ac.txt",
     "static/media/legRobot_prompt_analyzer.txt": "/RoboTool-Website/static/media/legRobot_prompt_analyzer.9999e782745afa126ba9.txt",
     "static/media/legRobot_prompt_planner.txt": "/RoboTool-Website/static/media/legRobot_prompt_planner.009131d3125eba9aa936.txt",
-    "main.379fbba4.css.map": "/RoboTool-Website/static/css/main.379fbba4.css.map",
-    "main.54e005b2.js.map": "/RoboTool-Website/static/js/main.54e005b2.js.map",
+    "main.ffcfca89.css.map": "/RoboTool-Website/static/css/main.ffcfca89.css.map",
+    "main.20d305c5.js.map": "/RoboTool-Website/static/js/main.20d305c5.js.map",
     "787.b5eb48a5.chunk.js.map": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.379fbba4.css",
-    "static/js/main.54e005b2.js"
+    "static/css/main.ffcfca89.css",
+    "static/js/main.20d305c5.js"
   ]
 }
