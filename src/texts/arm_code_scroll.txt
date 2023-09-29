@@ -1,0 +1,55 @@
+import numpy as np
+
+# Get the stick's position
+stick_position = get_position('stick')
+
+# Get the stick's size
+stick_size = get_size('stick')
+
+# Move the gripper close to the stick before grasping it
+move_to_position(stick_position + np.array([0.0, 0.0, stick_size[2]/2 - 0.03]))
+
+# Grasp the stick
+close_gripper()
+
+# Get the can's position
+can_position = get_position('can')
+
+# Move the grasped stick to make contact with the can
+move_to_position(can_position - np.array([stick_size[2]/2, 0.0, 0.0]))
+
+# Push the can closer to the strip of paper along the y-axis
+move_to_position(stick_position + np.array([0.0, 0.23, 0.0]))
+
+# Release the stick
+open_gripper()
+
+# Get the strip of paper's position
+paper_position = get_position('strip of paper')
+
+# Get the paper's size
+paper_size = get_size('strip of paper')
+
+# Move the gripper close to the strip of paper before grasping it
+move_to_position(paper_position + np.array([0.0, 0.0, paper_size[2]/2 - 0.03]))
+
+# Grasp the strip of paper
+close_gripper()
+
+# Drag the strip of paper in the negative x direction
+move_to_position(np.array([0.0, paper_position[1], paper_position[2]]))
+
+# Release the strip of paper
+open_gripper()
+
+# Get the can's position
+can_position = get_position('can')
+
+# Get the can's size
+can_size = get_size('can')
+
+# Move the gripper close to the can before grasping it
+move_to_position(can_position + np.array([0.0, 0.0, can_size[2]/2 - 0.03]))
+
+# Grasp the can
+close_gripper()

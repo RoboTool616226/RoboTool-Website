@@ -1,0 +1,23 @@
+import numpy as np
+
+# Get the current position of the chair
+chair_position, chair_orientation = get_position('chair')
+
+# Calculate the target position for the chair
+target_chair_position = np.array([chair_position[0]-1, chair_position[1], chair_position[2]])
+
+# Push the chair to the target position
+push_to_position('chair', target_chair_position)
+
+# Get the current position and size of the surfboard
+surfboard_position, surfboard_orientation = get_position('surfboard')
+surfboard_size = get_size('surfboard')
+
+# Get the size of the robot
+robot_size = get_size('robot')
+
+# Calculate the target position for the robot to walk onto the surfboard
+target_robot_position = np.array([surfboard_position[0], surfboard_position[1], surfboard_size[2]+robot_size[2]/2])
+
+# Walk to the target position on the surfboard
+walk_to_position(target_robot_position)

@@ -1,0 +1,31 @@
+import numpy as np
+
+# Get the position of magnetic_cube1
+magnetic_cube1_position = get_position('magnetic_cube1')
+
+# Get the size of magnetic_cube1
+magnetic_cube1_size = get_size('magnetic_cube1')
+
+# Move the gripper to the magnetic_cube1's position
+move_to_position(magnetic_cube1_position + np.array([0.0, 0.0, magnetic_cube1_size[2]/2 - 0.03]))
+
+# Close the gripper to grasp the magnetic_cube1
+close_gripper()
+
+# Get the position of magnetic_cube2
+magnetic_cube2_position = get_position('magnetic_cube2')
+
+# Move the magnetic_cube1 to make contact with the magnetic_cube2
+move_to_position(magnetic_cube2_position - np.array([magnetic_cube1_size[0]/2, 0.0, 0.0]))
+
+# Get the position of magnetic_cube3
+magnetic_cube3_position = get_position('magnetic_cube3')
+
+# Move the attached cubes to make contact with the magnetic_cube3
+move_to_position(magnetic_cube3_position - np.array([magnetic_cube1_size[0], 0.0, 0.0]))
+
+# Get the position of the button
+button_position = get_position('button')
+
+# Move the attached cubes to press the button
+move_to_position(button_position + np.array([magnetic_cube1_size[0], 0.0, 0.0]))

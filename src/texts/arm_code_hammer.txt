@@ -1,0 +1,38 @@
+import numpy as np
+
+# Get the position of the hammer
+hammer_position = get_position('hammer')
+
+# Move the gripper to the hammer's position
+target_position = hammer_position + np.array([0.0, 0.0, get_size('hammer')[2]/2 - 0.03])
+move_to_position(target_position)
+
+# Close the gripper to grasp the hammer
+close_gripper()
+
+# Get the updated position of the milk
+milk_position = get_position('milk')
+
+# Calculate the direction from the hammer to the milk
+direction = (milk_position - hammer_position) / np.linalg.norm(milk_position - hammer_position)
+
+# Move the grasped hammer to make contact with the milk
+target_position = milk_position - 0.5 * get_size('hammer')[0] * direction
+move_to_position(target_position)
+
+# Push the milk into the workspace
+target_position = [0.0, 0.0, milk_position[2]]
+move_to_position(target_position)
+
+# Release the hammer
+open_gripper()
+
+# Get the updated position of the milk
+milk_position = get_position('milk')
+
+# Move the gripper to the milk's position
+target_position = milk_position + np.array([0.0, 0.0, get_size('milk')[2]/2 - 0.03])
+move_to_position(target_position)
+
+# Close the gripper to grasp the milk
+close_gripper()

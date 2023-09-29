@@ -1,0 +1,19 @@
+import numpy as np
+
+# Get the positions and sizes of the objects
+sofa_1_position, _ = get_position('sofa_1')
+sofa_2_position, _ = get_position('sofa_2')
+sofa_2_size = get_size('sofa_2')
+robot_size = get_size('robot')
+
+# Calculate the target position for the surfboard
+surfboard_target_position = [(sofa_1_position[0] + sofa_2_position[0]) / 2, sofa_1_position[1], sofa_1_position[2]]
+
+# Push the surfboard to the target position
+push_to_position('surfboard', surfboard_target_position)
+
+# Calculate the target position for the robot
+robot_target_position = [sofa_2_position[0], sofa_2_position[1], sofa_2_size[2] + robot_size[2] / 2]
+
+# Walk to the target position
+walk_to_position(robot_target_position)

@@ -14,17 +14,30 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import Link from "@mui/material/Link";x
+// import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import DEMO_CODES from "./llmCodes";
 
-function DemoBlock(demo) {
+function DemoBlock(demo, displayDemo) {
   // get demo name from the args
   //   const demo_name = args["demo_name"];
   //   const demo_dict = DEMO_CODES[demo_name];
   const demo_video_url = demo["video_url"];
-  const demo_code = demo["code"];
+  // const demo_code = demo["code"];
+  const demo_file = demo["file_path"];
+  const demo_name = demo["task_name"];
+
+  const [fileContent, setFileContent] = React.useState("");
+  React.useEffect(() => {
+    // Define the file path here
+    const filePath = demo_file;
+    fetch(filePath)
+      .then((response) => response.text())
+      .then((data) => {
+        setFileContent(data);
+      });
+  }, [displayDemo]);
 
   // get the demo video link and LLM code from the dictionary
 
@@ -33,15 +46,18 @@ function DemoBlock(demo) {
     <Grid
       container
       xs={12}
-      spacing={1}
-      justifyContent="space-between"
-      marginTop="20px"
+      spacing={2}
+      justifyContent="space-evenly"
+      marginTop="10px"
     >
-      <Grid item container xs={12} md={6} justifyContent="center">
+      <Grid item xs={12}>
+        <Typography variant="h6">{demo_name}</Typography>
+      </Grid>
+      <Grid item xs={12} md={4} justifyContent="center">
         <Grid item container xs={12} justifyContent="center">
           <iframe
             width="410px"
-            height="250px"
+            height="280px"
             src={demo_video_url}
             title="YouTube video player"
             frameBorder="0"
@@ -50,11 +66,12 @@ function DemoBlock(demo) {
           />
         </Grid>
       </Grid>
-      <Grid item container xs={12} md={6} justifyContent="center">
+      <Grid item xs={12} md={8} justifyContent="center">
         <Box
+          fullWidth
           sx={{
-            width: "410px",
-            height: "250px",
+            // width: "410px",
+            height: "280px",
             overflowY: "auto",
             backgroundColor: "rgba(0,0,0,0.04)", // You can choose your own color
             border: "1px solid #ccc",
@@ -69,6 +86,7 @@ function DemoBlock(demo) {
           <Typography
             variant="body2"
             component="pre"
+            fullWidth
             // nowrap
             sx={{
               // maxWidth: 200,
@@ -77,7 +95,7 @@ function DemoBlock(demo) {
               // fontSize: ""
             }}
           >
-            {demo_code}
+            {fileContent}
           </Typography>
         </Box>
       </Grid>
@@ -86,7 +104,7 @@ function DemoBlock(demo) {
 }
 
 export default function Demo() {
-  const [displayDemo, setDisplayDemo] = React.useState("sequential");
+  const [displayDemo, setDisplayDemo] = React.useState("selection");
 
   function handleButtonPress(demo_name) {
     setDisplayDemo(demo_name);
@@ -97,7 +115,7 @@ export default function Demo() {
   return (
     <main>
       {/* Hero unit */}
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         {/* Display creative tool use with robotic arm */}
         {/* <Grid container> */}
         {/* <ButtonGroup
@@ -105,7 +123,26 @@ export default function Demo() {
           variant="outlined"
           aria-label="outlined primary button group"
         > */}
-        <Grid container spacing={2} marginTop="20px" justifyContent="center">
+        <Grid
+          container
+          spacing={2}
+          marginTop="20px"
+          justifyContent="space-evenly"
+        >
+          <Grid item xs={12}>
+            <Typography variant="h4" align="center">
+              Experiment Videos and Generated Code
+            </Typography>
+          </Grid>
+          <Grid item xs={10} md={4}>
+            <Button
+              fullWidth
+              variant={displayDemo === "selection" ? "contained" : "outlined"}
+              onClick={() => handleButtonPress("selection")}
+            >
+              Tool Selection
+            </Button>
+          </Grid>
           <Grid item xs={10} md={4}>
             <Button
               fullWidth
@@ -118,23 +155,13 @@ export default function Demo() {
           <Grid item xs={10} md={4}>
             <Button
               fullWidth
-              variant={displayDemo === "creative" ? "contained" : "outlined"}
-              onClick={() => handleButtonPress("creative")}
-            >
-              Creative Tool Use
-            </Button>
-          </Grid>
-          <Grid item xs={10} md={4}>
-            <Button
-              fullWidth
               variant={displayDemo === "manufacture" ? "contained" : "outlined"}
               onClick={() => handleButtonPress("manufacture")}
             >
-              Tool Manufacture
+              Tool Manufacturing
             </Button>
           </Grid>
         </Grid>
-
         {/* <Button onClick={() => handleButtonPress("legRobot_surfboard")}>
           Creative Use
         </Button>
@@ -145,8 +172,8 @@ export default function Demo() {
         {/* </Grid> */}
       </Container>
 
-      <Container maxWidth="md">
-        {currentDemos.map((demo) => DemoBlock(demo))}
+      <Container maxWidth="lg">
+        {currentDemos.map((demo) => DemoBlock(demo, displayDemo))}
         {/* <DemoBlock demo_name={displayDemo} /> */}
       </Container>
     </main>
