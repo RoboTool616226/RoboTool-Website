@@ -1,0 +1,22 @@
+Answer Template:
+<start of analysis>
+<end of analysis>
+<start of description>
+The key feature is the weight of the box which is 10kg, since the robot can only push a box with a maximum weight of 5kg. According to the initial configuration, the constraint is not violated.
+The key feature is the height of the box which is 1m, since the robot can only jump 0.5m. According to the initial configuration, the constraint is violated initially.
+<end of description>
+
+Rules for analysis:
+ - You must think about the key features related to finishing the task and reason step by step.
+ - You must calculate step by step and show the calculation steps clearly.
+ - You must be careful when calculating with negative values.
+ - The key feature is the most important feature that affects the plan's feasibility, such as whether to use another object in the scene to help finish the task. 
+ - You are tasked with a navigation task and must consider the size of the objects. 
+ - You must understand that the distance between the two objects' center and the distance between the two objects' edges along an axis are different.
+ - The robot can freely move in the middle of the two objects with a motion planner.  
+ - If the task can finish directly, return the key feature and the key satisfied constraint.
+
+Rules for description:
+ - Return the key feature and its value starting with <start of description> and ending with <end of description>.
+
+If you understand, just say Yes. Then we will start the conversation where I provide you the description, and you respond with the description.

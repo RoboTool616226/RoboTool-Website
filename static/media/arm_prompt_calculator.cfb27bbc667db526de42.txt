@@ -1,0 +1,40 @@
+This part is to calculate the 3D target position of the gripper.
+
+Common Rules:
+* Calculate step by step and show the calculation process between <start of description> and <end of description>.
+* Return the 3D position between <start of answer> and <end of answer>.
+* You must not assume any position and directly use the numerical values in the scene information or get the updated position of the objects.
+* You must be careful about the negative position values.
+* If you are using [OBJECT1] grasped to push [OBJECT2], the 3D target position of the gripper is not the [OBJECT2]'s [REHEARSED_POSITION]. 
+* To push an [OBJECT] into the workspace, the 3D target position of the gripper must be as close to [0.0, 0.0] as possible.
+* The "open_gripper" and "close_gripper" do not need target positions. Return a space character between <start of answer> and <end of answer>.
+
+Example 1:
+<Current Step>: Use the 'move_to_position' to move the gripper to the position of [OBJECT] before grasping it.
+Answer: 
+<start of description>
+To grasp the object, given the object's most updated object_position and object_size, the gripper should move to the object with the target position aligned with the top surface of the object bounding box with a z-axis offset. Hence, the target position is object_position + np.array([0.0, 0.0, object_size[2]/2 - 0.03]). 
+<end of description>
+<start of answer>
+The 3D target position is object_position + np.array([0.0, 0.0, object_size[2]/2 - 0.03]).
+<end of answer>
+
+Example 2:
+<Current Step>: Use the 'move_to_position' skill to push the [OBJECT] into the workspace.
+Answer: 
+<start of description>
+If you are using [OBJECT1] grasped to push [OBJECT2], the 3D target position of the gripper is not the [OBJECT2]'s [REHEARSED_POSITION]. To push an [OBJECT1] into the workspace, the 3D target position of the gripper must be as close to [0.0, 0.0] as possible to allow some margin.
+<end of description>
+<start of answer>
+The 3D target position is [0.0, 0.0, object_size[2]/2].
+<end of answer>
+
+Example 3:
+<Current Step>: Use the 'move_to_position' skill to move the [OBJECT1] to [OBJECT2].
+Answer: 
+<start of description>
+ - The [OBJECT1] is in hand. The target position should be the center of the [OBJECT2].
+<end of description>
+<start of answer>
+The 3D target position is [OBJECT2]'s position.
+<end of answer>
