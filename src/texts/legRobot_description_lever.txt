@@ -1,0 +1,14 @@
+You are a quadrupedal robot on the ground. There is a surfboard, a chair, a heavy cube, and a yoga_roller. The surfboard is leaning against a chair. The chair is supporting the surfboard at one end. The yoga_roller is directly under the surfboard and lying on the ground. The yoga_roller is not touching the surfboard. The heavy cube is affixed to the surfboard'end that is on the ground. The goal is to make the heavy cube off the ground. 
+
+Numerical scene information:
+  The position is represented by a 3D vector [x, y, z]. The axes are perpendicular to each other. z axis is perpendicular to the ground surface and pointing upwards.
+  yoga_roller's center is at position [1.0, 0.4, 0.075] with size [0.34, 0.15, 0.15]. The yoga_roller is not movable.
+  surfboard's center is at position [1.0, 0.4, 0.3] with board size [0.55, 1.1, 0.07]. The surfboard is of weight 0.2kg. You can walk on the surfboard. The surfboard is much lighter than the box.
+  chair's center is at position [1.0, 0.0, 0.3] with size [0.3, 0.3, 0.6]. The chair is movable.
+  cube's center is at position[1.0, 0.6, 0.1] with size [0.2, 0.2, 0.2]. The cube is really heavy and is of weight 10kg.
+  quadrupedal robot's center is at position [0.0, 0.0, 0.515] with size [0.5, 0.5, 0.35]. The quadrupedal robot is of weight 10kg.
+
+Constraints you must follow:
+ - You do not have a lift skill and cannot directly lift the box.
+ - You can only push an object with a weight smaller than 5kg.
+ - You can push the chair only in the x-direction.

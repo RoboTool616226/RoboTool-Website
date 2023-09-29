@@ -1,0 +1,14 @@
+You are in a 3D world. You are a robot arm mounted on a table. You can control the end effector's position and gripper. Object list = ['can', 'stick', 'strip of paper']. The robot wants to grasp the can.
+ 
+ Numerical scene information:
+ - The position is represented by a 3D vector [x, y, z]. The axes are perpendicular to each other.
+ - The base of the robot arm is at [0.0, 0.0, 0.0].
+ - a_strip_of_paper is a flat and coarse strip of paper with a graspable point at [0.35, 0.2, 0.05]. The paper is a rectangle that covers the x-range from 0.3 to 0.9 and y-range from 0.1 to 0.3. It's soft and can be dragged in the negative x direction using the gripper.
+ - The graspable point of stick is at [0.4, -0.1, 0.02], which is at one end of stick. The stick has a length of 0.5 and is pointing to the positive x direction from the graspable point.
+ - The center of the can is at position [0.7, -0.03, 0.07] with size [0.08 0.05 0.05]. The can is not on the strip of paper initially. 
+
+Constraints you must follow:
+ - The robot arm's workspace's x-range is 0.0m to 0.42m, y-range is -0.25m to 0.25m, z-range is 0.01m to 0.3m. 
+ - You can drag a stripe of paper only in the negative x direction. 
+ - You can use the stick to move objects along the y axis.
+

@@ -140,11 +140,7 @@ export default function Prompts() {
           {agent.charAt(0).toUpperCase() + agent.slice(1)} Prompts
         </DialogTitle>
 
-        <DialogContent
-          sx={{
-            height: "70vh",
-          }}
-        >
+        <Box marginLeft="20px" marginRight="20px" marginBottom="10px">
           <ButtonGroup fullWidth>
             <Button
               onClick={() => setEnv("arm")}
@@ -161,6 +157,12 @@ export default function Prompts() {
               Quadrupedal Robot
             </Button>
           </ButtonGroup>
+        </Box>
+        <DialogContent
+          sx={{
+            height: "70vh",
+          }}
+        >
           <DialogContentText
             marginTop="20px"
             component="pre"

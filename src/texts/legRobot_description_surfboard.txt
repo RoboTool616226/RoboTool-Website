@@ -1,0 +1,12 @@
+A quadrupedal robot is on top of sofa_1. There is another sofa_2 in front of the robot. There is a surfboard and a strip_of_cloth on sofa_1. The robot wants to stand on top of sofa_2.
+  
+Numerical scene information:
+  sofa_1's center is at position [0.0, 0.0, 0.17] with size [1.5, 0.9, 0.34]. 
+  sofa_2's center is at position [1.45, 0.0, 0.17] with size [0.6, 0.9, 0.34]. 
+  surfboard's center is at position [0.50, 0.0, 0.375] with size [1.1, 0.55, 0.07]. The surfboard's weight is smaller than the quadrupedal robot. The surfboard is movable.
+  strip_of_cloth's center is at position [0.3, 0.2, 0.342] with size [1.1, 0.55, 0.004].
+  quadrupedal robot's center is at position [-0.5, 0.0, 0.515] with size [0.5, 0.5, 0.35].
+
+Constraints you must follow:
+ - You can stay and walk on top of a surface as long as your bounding box is in the x-y range of the surface.
+ - You can only walk across a gap smaller than 0.1m in the x-y plane.

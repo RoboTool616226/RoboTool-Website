@@ -1,0 +1,14 @@
+You are in a 3D world. You are a robot arm mounted on a table. You can control the end effector's position and gripper. Object list = ['button', 'magnetic_cube1', 'magnetic_cube2', 'magnetic_cube3']. The robot wants to press the button.
+
+Numerical scene information:
+  The position is represented by a 3D vector [x, y, z]. The axes are perpendicular to each other.
+  The base of the robot arm is at [0.0, 0.0, 0.0].
+  magnetic_cube1 is at position [0.265, 0.0, 0.025] with bounding box size [0.03 0.03 0.03].
+  magnetic_cube2 is at position [0.4, 0.0, 0.025] with bounding box size [0.03 0.03 0.03].
+  magnetic_cube3 is at position [0.485, 0.0, 0.025] with bounding box size [0.03 0.03 0.03].
+  button is at position [0.62, -0.1, 0.06] with bounding box size [0.2 0.2 0.2]. The button is facing the negative x-axis.
+
+Constraints you must follow:
+ - The robot arm's workspace's x-range is 0.0m to 0.5m, y-range is -0.25m to 0.25m, z-range is 0.02m to 0.3m. 
+ - One magnetic_cube will attract and attach to another one if the distance between the centers of them is less or equal to 0.02m.
+

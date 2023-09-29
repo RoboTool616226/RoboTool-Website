@@ -1,0 +1,9 @@
+You are in a 3D world. You are a robot arm mounted on a table. You can control the end effector's position and gripper. Object list = [milk, hammer]. The robot wants to grasp the milk.
+
+Numerical scene information:
+  The graspable point of hammer is at [0.35, -0.15, 0.025], and with handle length 0.2 and head halfsize 0.022 and bounding box size [0.2, 0.045, 0.05]. The head is further away from the gripper than the other end of the hammer.
+  milk is at position [0.544, -0.001, 0.08] with bounding box size [0.044 0.044 0.16 ].
+
+Constraints you must follow:
+ - The robot arm's workspace's x-range is 0.0m to 0.45m, y-range is -0.25m to 0.25m, z-range is 0.01m to 0.3m.
+

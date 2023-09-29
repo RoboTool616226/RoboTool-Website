@@ -1,0 +1,14 @@
+You are a quadrupedal robot on the ground. There is a sofa in front of the robot. There is a box_1 and a box_2 on the ground. The robot wants to get on top of the sofa.
+  
+Numerical scene information:
+  The position is represented by a 3D vector [x, y, z]. The axes are perpendicular to each other. z axis is perpendicular to the ground surface and pointing upwards.
+  sofa's center is at position [3.0, 0.2, 0.17] with size [0.9, 1.5, 0.34]. The sofa is of height 0.34m.
+  box_1's center is at position [2.35, 0.65, 0.12] with size [0.4, 0.6, 0.24]. The box_1 is of height 0.24m. The box_1 is movable.
+  box_2's center is at position [1.0, 0.0, 0.06] with size [0.4, 0.6, 0.12]. The box_2 is of height 0.12m. The box_2 is movable.
+  quadrupedal robot's center is at position [0.0, 0.0, 0.515] with size [0.5, 0.5, 0.35].
+
+Constraints you must follow:
+ - You can stay and walk on a surface as long as your bounding box is in the x-y range of the surface.
+ - You can only walk across a 0.1m gap in the x-y plane.
+ - You can only push an object that is on the same surface as you. You can not push another [OBJECT] while on top of a [OBJECT].
+ - You can only climb up a platform with a height no larger than 0.12m.
