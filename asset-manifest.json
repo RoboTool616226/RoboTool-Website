@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/RoboTool-Website/static/css/main.745ddb78.css",
+    "main.css": "/RoboTool-Website/static/css/main.a334d406.css",
     "main.js": "/RoboTool-Website/static/js/main.706f605b.js",
     "static/js/787.b5eb48a5.chunk.js": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js",
     "static/media/background.png": "/RoboTool-Website/static/media/background.e35024c7523e47a0a2e7.png",
@@ -21,12 +21,12 @@
     "static/media/legRobot_code_lever.txt": "/RoboTool-Website/static/media/legRobot_code_lever.7ea5bcb7a4c1ee93a811.txt",
     "static/media/legRobot_code_surfboard.txt": "/RoboTool-Website/static/media/legRobot_code_surfboard.f7d6c9caf8f1ecf3664b.txt",
     "index.html": "/RoboTool-Website/index.html",
-    "main.745ddb78.css.map": "/RoboTool-Website/static/css/main.745ddb78.css.map",
+    "main.a334d406.css.map": "/RoboTool-Website/static/css/main.a334d406.css.map",
     "main.706f605b.js.map": "/RoboTool-Website/static/js/main.706f605b.js.map",
     "787.b5eb48a5.chunk.js.map": "/RoboTool-Website/static/js/787.b5eb48a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.745ddb78.css",
+    "static/css/main.a334d406.css",
     "static/js/main.706f605b.js"
   ]
 }
