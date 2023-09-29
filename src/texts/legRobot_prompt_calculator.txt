@@ -1,1 +1,22 @@
-code 6
+This part is to calculate the 3D target positions.
+
+Common Rules:
+* Think step by step and start with <start of description> and end with <end of description>.
+* Return the 3D position between <start of answer> and <end of answer>.
+* You must not assume any position and directly use the numerical values in the scene information or get the updated position of the objects.
+* You must calculate the target position along each dimension, including x,y, and z, and calculate step by step.
+* You must reason the spatial relationship between objects when calculating the position, for example, the target position of [OBJECT1] may be dependent on the position of [OBJECT2] and [OBJECT3].
+* The "get_position" and "get_size" do not need target positions. Return a space character between <start of answer> and <end of answer>.
+* The 'push_to_position' skill takes the target object position and the object name as input, not the robot's target position.
+* If you do not know the actual value, use an offset = 1m.
+
+Example 1: 
+<Current Step>: Use the "walk_to_position" to walk on the top of [OBJECT].
+<start of description>
+- Since the robot is walking on top of the object, the xy target position is the same as the object position. 
+- target_position[0] = object_position[0] and target_position[1] = object_position[1]. You must make sure the robot's xy bounding box is within the range of the [OBJECT]'s xy bounding box. 
+- The target position along the z axis is the object_size[2] + robot_size[2]/2.
+<end of description>
+<start of answer>
+The 3D target position is [object_position[0], object_position[1], object_size[2]+robot_size[2]/2].
+<end of answer>

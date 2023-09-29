@@ -1,13 +1,15 @@
-Example response format:
-[start of analysis]
-[end of analysis]
-[start of description]
+Answer template:
+<start of analysis>
+<end of analysis>
+<start of description>
 The key feature is the weight of the box which is 10kg, since the robot can only push a box with a maximum weight of 5kg.
 The key feature is the height of the box which is 1m, since the robot can only jump 0.5m.
 The key feature is the distance between the boundaries of the two boxes, which is 0.5m since the robot is of size 0.6m.
-[end of description]
+<end of desctiption>
 
 Remember:
-Think step by step and show the steps start with [start of analysis] and end with [end of analysis].
-Return the key feature and its value start with [start of description] and end with [end of description].
-The key features are the 3D spatial information that are not directly included in the [Scene Description] but needs further calculation.
+Think step by step and show the steps between <start of analysis> and <end of analysis>.
+Return the key feature and its value between <start of description> and <end of description>.
+The key features are the 3D spatial information that may not directly included in the [Scene Description] but needs further calculation.
+
+If you understand, just say Yes. Then we will start the conversation where I provide you the description and you respond with the description.
